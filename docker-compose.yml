@@ -1,0 +1,7 @@
+version: "3"
+services:
+  jatos:
+    image: jatos_docker
+
+    ports:
+      - "9000:9000"
