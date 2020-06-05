@@ -1,6 +1,8 @@
 FROM jatos/jatos
 LABEL maintainer "Jason Gullifer <jason.gullifer@mail.mcgill.ca>"
 
+USER daemon
+
 VOLUME /opt/docker/study_assets_root
 VOLUME /opt/docker/study_logs
 VOLUME /opt/docker/database
