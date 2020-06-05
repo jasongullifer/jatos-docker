@@ -1,8 +1,6 @@
 FROM jatos/jatos
 LABEL maintainer "Jason Gullifer <jason.gullifer@mail.mcgill.ca>"
 
-USER daemon
-
-COPY --chown=daemon:daemon ./study_assets_root /opt/docker/study_assets_root/
-COPY --chown=daemon:daemon ./study_logs /opt/docker/study_logs/
-COPY ./production.conf /opt/docker/conf/production.conf
+VOLUME /opt/docker/study_assets_root
+VOLUME /opt/docker/study_logs
+VOLUME /opt/docker/database
