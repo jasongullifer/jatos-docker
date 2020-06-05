@@ -2,9 +2,10 @@ version: "3"
 services:
   jatos:
     image: jatos_docker
+    user: daemon
     volumes:
       - ./persist/study_assets_root:/opt/docker/study_assets_root
       - ./persist/study_logs:/opt/docker/study_logs
       - ./persist/database:/opt/docker/database
     ports:
-      - "9000:9000"
+      - "80:9000"
